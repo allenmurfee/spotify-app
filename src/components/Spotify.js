@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function getSpotify() {
+export default function getSpotify() {
   const clientId = process.env.CLIENTID;
   const clientSecret = process.env.CLIENTSECRET;
   const base64Auth = btoa(`${clientId}:${clientSecret}`);
@@ -18,4 +18,3 @@ function getSpotify() {
     .then((data) => console.log(data));
 }
 
-export default getSpotify;
